@@ -1,22 +1,22 @@
-public class Rettangolo {
-    private int base;
+public class RettTest {
+    private int larghezza;
     private int altezza;
 
-    public Rettangolo() {
-        this.base = 1;
+    public RettTest() {
+        this.larghezza = 1;
         this.altezza = 1;
     }
 
-    public int getbase() {
-        return base;
+    public int getLarghezza() {
+        return larghezza;
     }
 
-    public void setbase(int base) {
-        if (base > 0) {
-            this.base = base;
+    public void setLarghezza(int larghezza) {
+        if (larghezza > 0) {
+            this.larghezza = larghezza;
         } else {
-            this.base = 1;
-            System.out.println("Errore: base non valida. Impostato a 1.");
+            System.out.println("Errore: larghezza non valida. Impostato a 1.");
+            this.larghezza = 1;
         }
     }
 
@@ -28,19 +28,19 @@ public class Rettangolo {
         if (altezza > 0) {
             this.altezza = altezza;
         } else {
-            this.altezza = 1;
             System.out.println("Errore: altezza non valida. Impostato a 1.");
+            this.altezza = 1;
         }
     }
 
     public int calcolaArea() {
-        return base * altezza;
+        return larghezza * altezza;
     }
 
     public static void main(String[] args) {
-        Rettangolo rettangolo = new Rettangolo();
-        rettangolo.setbase(-5);
-        rettangolo.setAltezza(-3);
+        RettTest rettangolo = new RettTest();
+        rettangolo.setLarghezza(-5);
+        rettangolo.setAltezza(3);
         System.out.println("Area del rettangolo: " + rettangolo.calcolaArea());
     }
 }
